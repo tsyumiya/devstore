@@ -3,9 +3,12 @@ import { Product } from "@/data/types/products"
 import Image from "next/image"
 import Link from "next/link"
 import { resolve } from "path"
+import { cache } from "react"
 
 async function getFeaturedProducts(): Promise<Product[]> {
-  const response = await api("/products/featured")
+  const response = await api("/products/featured", {
+    cache: "no-store"
+  })
   const products = await response.json()
 
   return products
