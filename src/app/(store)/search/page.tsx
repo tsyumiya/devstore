@@ -1,5 +1,5 @@
 import Link from "next/link"
-import Image from "next/Image"
+import Image from "next/image"
 import { redirect } from "next/navigation"
 import { Product } from "@/data/types/products"
 import { api } from "@/data/api"
