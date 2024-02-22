@@ -14,8 +14,8 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v3
+      - name: Install PNPM
+        uses: pnpm/action-setup@v2
         with:
           version: 8
           run_install: false
@@ -40,7 +40,7 @@ jobs:
         uses: cypress-io/github-action@v6
         env:
           APP_URL: http://localhost:3000
-          NEXT_PUBLIC_API_URL: https://devstore-six.vercel.app
+          NEXT_PUBLIC_API_BASE_URL: https://devstore-six.vercel.app
         with:
           build: npm run build
           start: npm start
