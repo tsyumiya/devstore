@@ -42,5 +42,5 @@ jobs:
           APP_URL: http://localhost:3000
           NEXT_PUBLIC_API_BASE_URL: https://devstore-api-lyart.vercel.app
         with:
-          build: npm run build
           start: npm ci
+          build: npm run build
