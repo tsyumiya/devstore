@@ -9,11 +9,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Cypress install
-        uses: cypress-io/github-action@v6
-        with:
-          runTests: false
-
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
@@ -24,6 +19,11 @@ jobs:
         with:
           version: 8
           run_install: false
+
+      - name: Cypress install
+        uses: cypress-io/github-action@v6
+        with:
+          runTests: false
 
       - name: Get pnpm store directory
         shell: bash
