@@ -11,5 +11,6 @@ describe("search products", () => {
     cy.on("uncaught:exception", () => false)
     cy.visit("/search")
     cy.location("pathname").should("equal", "/")
+    //
   })
 })
